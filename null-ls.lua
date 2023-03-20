@@ -1,8 +1,4 @@
-local present, null_ls = pcall(require, "null-ls")
-
-if not present then
-  return
-end
+local null_ls = require "null-ls"
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
@@ -17,7 +13,6 @@ null_ls.setup({
 	debug = true,
 	sources = {
         formatting.eslint,
-        formatting.eslint_d,
         formatting.fixjson,
         formatting.markdownlint,
         formatting.black,
@@ -25,13 +20,14 @@ null_ls.setup({
         formatting.prettier.with({
             prefer_local = "node_modules/.bin",
         }),
+        formatting.lua_format,
         formatting.trim_newlines,
         formatting.trim_whitespace,
         diagnostics.flake8.with({
             extra_args = { "--max-line-length=119" }
         }),
-        diagnostics.eslint_d.with({
-            prefer_local = "node_modules/.bin"
+        diagnostics.eslint.with({
+          prefer_local = "node_modules/.bin"
         }),
         diagnostics.luacheck,
         code_actions.eslint.with({
