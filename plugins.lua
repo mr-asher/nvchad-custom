@@ -1,5 +1,4 @@
 return {
-
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -18,6 +17,5 @@ return {
             require "plugins.configs.lspconfig"
             require "custom.lspconfig"
         end
-    }
-
+    }, {"tpope/vim-fugitive", lazy = false}, {"tpope/vim-rhubarb"}
 }
