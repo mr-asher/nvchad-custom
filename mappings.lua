@@ -4,17 +4,17 @@ local M = {}
 
 M.general = {
  i = {
-   ["jk"] = { "<ESC>", " Exit insert mode", opts = { nowait = true }}
+   ["jk"] = { "<ESC>", "exit insert mode", opts = { nowait = true }}
  },
  x = {
-   ["<leader>p"] = {"\"_dP", " Greatest remap ever?"}
+   ["<leader>p"] = {"\"_dP", "greatest remap ever?"}
  },
  n = {
-   ["<leader>y"] = {"\"+y", " Yank to clipboard."},
-   ["<leader>gs"] = {"<cmd> Git <CR>", "Open git fugitive."}
+   ["<leader>y"] = {"\"+y", "yank to clipboard"},
+   ["<leader>gs"] = {"<cmd> Git <CR>", "git fugitive"}
  },
  v = {
-   ["<leader>y"] = {"\"+y", " Yank to clipboard."}
+   ["<leader>y"] = {"\"+y", "yank to clipboard"}
  },
 }
 
