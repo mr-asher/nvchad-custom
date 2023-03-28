@@ -1,11 +1,10 @@
-return {
+-- local overrides = require("custom.configs.overrides")
+
+---@type NvPluginSpec[]
+local plugins = {
+
+    -- Get those LSPs under control
     {
-        "neovim/nvim-lspconfig",
-        config = function()
-            require "plugins.configs.lspconfig"
-            require "custom.lspconfig"
-        end
-    }, {
         "neovim/nvim-lspconfig",
 
         dependencies = {
@@ -17,5 +16,13 @@ return {
             require "plugins.configs.lspconfig"
             require "custom.lspconfig"
         end
-    }, {"tpope/vim-fugitive", lazy = false}, {"tpope/vim-rhubarb"}
+    },
+
+    -- Better git
+    {"tpope/vim-fugitive", lazy = false},
+
+    -- Even better git
+    {"tpope/vim-rhubarb"}
 }
+
+return plugins

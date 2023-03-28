@@ -3,7 +3,8 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "jedi_language_server", "tsserver", "cssls", "html" }
+-- if you just want default config for the servers then put them in a table
+local servers = { "html", "cssls", "tsserver", "clangd" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -12,10 +13,5 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.sourcery.setup {
-    init_options = {
-        editor_version = 'vim',
-        extension_version = 'vim.lsp',
-        token = os.getenv("SOURCERY_KEY")
-    }
-}
+-- 
+-- lspconfig.pyright.setup { blabla}
