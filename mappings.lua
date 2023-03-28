@@ -14,7 +14,9 @@ M.general = {
    ["<leader>gs"] = {"<cmd> Git <CR>", "git fugitive"}
  },
  v = {
-   ["<leader>y"] = {"\"+y", "yank to clipboard"}
+   ["<leader>y"] = {"\"+y", "yank to clipboard"},
+   ["J"] = {"<cmd> m '>+1<CR>gv=gv", "move line up"},
+   ["K"] = {"<cmd> m '<-2<CR>gv=gv", "move line down"},
  },
 }
 

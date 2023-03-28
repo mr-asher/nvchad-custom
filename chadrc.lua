@@ -1,13 +1,14 @@
+---@type ChadrcConfig
 local M = {}
 
 -- make sure you maintain the structure of `core/default_config.lua` here,
 -- example of changing theme:
 
 M.ui = {
-  theme = "rosepine",
+  theme = "tokyonight",
 }
 
-M.mappings = require("custom.mappings")
+M.mappings = require "custom.mappings"
 
 M.plugins = "custom.plugins"
 
