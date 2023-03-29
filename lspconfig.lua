@@ -11,11 +11,3 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
-lspconfig.sourcery.setup {
-    init_options = {
-        editor_version = 'vim',
-        extension_version = 'vim.lsp',
-        token = os.getenv("SOURCERY_KEY")
-    }
-}

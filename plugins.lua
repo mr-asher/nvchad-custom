@@ -9,12 +9,12 @@ local plugins = {
 
         dependencies = {
             "jose-elias-alvarez/null-ls.nvim",
-            config = function() require "custom.null-ls" end
+            config = function() require "custom.config.null-ls" end
         },
 
         config = function()
             require "plugins.configs.lspconfig"
-            require "custom.lspconfig"
+            require "custom.configs.lspconfig"
         end
     },
 

@@ -23,3 +23,34 @@ null_ls.setup {
   debug = true,
   sources = sources,
 }
+
+-- null_ls.setup({
+-- 	debug = true,
+-- 	sources = {
+--         formatting.eslint,
+--         formatting.fixjson,
+--         formatting.markdownlint,
+--         formatting.black,
+--         formatting.isort,
+--         formatting.prettier.with({
+--             prefer_local = "node_modules/.bin",
+--         }),
+--         formatting.lua_format,
+--         formatting.trim_newlines,
+--         formatting.trim_whitespace,
+--         diagnostics.flake8.with({
+--             extra_args = { "--max-line-length=119" }
+--         }),
+--         diagnostics.eslint.with({
+--           prefer_local = "node_modules/.bin"
+--         }),
+--         diagnostics.luacheck,
+--         code_actions.eslint.with({
+--             prefer_local = "node_modules/.bin"
+--         }),
+--         code_actions.gitsigns,
+--         code_actions.gitrebase,
+--
+--         hover.dictionary
+-- 	},
+-- })
