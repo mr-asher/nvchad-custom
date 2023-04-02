@@ -3,26 +3,28 @@
 ---@type NvPluginSpec[]
 local plugins = {
 
-    -- Get those LSPs under control
-    {
-        "neovim/nvim-lspconfig",
+  -- Get those LSPs under control
+  {
+    "neovim/nvim-lspconfig",
 
-        dependencies = {
-            "jose-elias-alvarez/null-ls.nvim",
-            config = function() require "custom.config.null-ls" end
-        },
-
-        config = function()
-            require "plugins.configs.lspconfig"
-            require "custom.configs.lspconfig"
-        end
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require "custom.configs.null-ls"
+      end,
     },
 
-    -- Better git
-    {"tpope/vim-fugitive", lazy = false},
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
+  },
 
-    -- Even better git
-    {"tpope/vim-rhubarb"}
+  -- Better git
+  { "tpope/vim-fugitive", lazy = false },
+
+  -- Even better git
+  { "tpope/vim-rhubarb" },
 }
 
 return plugins

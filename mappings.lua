@@ -13,7 +13,6 @@ M.general = {
  n = {
    ["<leader>y"] = {"\"+y", "yank to clipboard"},
    ["<leader>gs"] = {"<cmd> Git <CR>", "git fugitive"},
-   [";"] = { ":", "enter command mode", opts = { nowait = true } },
  },
  v = {
    ["<leader>y"] = {"\"+y", "yank to clipboard"},
